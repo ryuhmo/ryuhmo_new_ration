@@ -1,0 +1,155 @@
+*
+{
+
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+body
+{
+    background-size:cover;
+    background-position:center;
+    font-family:sans-serif;
+    background-color:#eee;
+}
+
+.menu-bar 
+{
+    background:rgba(62,30,30,1);
+    text-align:center;
+    padding:6px;
+    height: 10mm;
+    
+
+}
+.menu-bar ul 
+{ 
+    display: inline-flex;
+    list-style:none;
+    color:white;
+}
+
+.menu-bar ul li {
+     width:120px;
+     margin-right:120px;
+     padding: 4px;
+   
+  
+
+}
+
+.menu-bar ul li a {
+    text-decoration:none;
+    color:white;
+}
+
+
+.biz, .menu-bar ul li:hover {
+    background-color:green;
+    border-radius: 3px;
+    
+    
+
+
+}
+
+.menu-bar .fa
+{
+    margin-right: 8px;
+}
+
+.fa-angle-double-right
+{
+    float:right;
+}
+.sub-menu-1{
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1
+{
+    display:block;
+    position:absolute;
+    border:6px outset rgb(83, 40, 40);
+    background: rgb(54, 26, 26);
+    color:wheat;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+    display:block;
+    margin:0px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    width:110px;
+    padding:5px;
+    border-bottom:1px solid white;
+    background:transparent;
+    border-radius:0;
+    text-align:left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    border-bottom:none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+
+    color:blue;
+}
+
+.menu-bar ul li a:hover
+
+{
+    color:blue;
+}
+
+.welcome{
+    background:rgb(5, 71, 33);
+    text-align:center;
+    margin:0px;
+    width:100%;
+    border: 4px groove rgb(216, 216, 215);
+    padding: 1px;
+    color: rgb(155, 153, 150);
+}
+
+
+
+.home-login{
+    position: absolute;
+   margin-left: 90%;
+   margin-top: -99px;
+   font-size: 20px;
+   text-size-adjust: 45px;
+   text-decoration-color: rgb(8, 226, 204);
+}
+.article{
+    margin-left:10px;
+}
+#go {
+    font-style: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25pt;
+    position: absolute;
+    margin-left: 200px;
+}
+#g1 {
+    margin-top: 1.5cm;
+    font-style: regular;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+    position: absolute;
+    margin-left: 200px;
+}
+#g2 {
+    margin-top: 2cm;
+    font-style: regular;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+    position: absolute;
+    margin-left: 200px;
+}
