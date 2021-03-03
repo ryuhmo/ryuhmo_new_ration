@@ -3,6 +3,21 @@ table {
     border-collapse: collapse;
     width:100%;
 }
+#search{
+  background:rgba(62,30,30,1);
+  border:2px solid rgb(173, 124, 33);
+  color:rgb(243, 242, 242);
+  padding:1px 10px ;
+  margin-right:6px;
+  margin-top:15px;
+  margin-bottom:15px;
+  border-radius:6px;
+}
+.sr{
+  border:10p solid black;
+  border-radius:6px;
+}
+
   th{
     border:1px solid #aa2f2f;
     background:rgb(61, 11, 11);

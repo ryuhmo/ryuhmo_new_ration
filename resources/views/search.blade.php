@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <table class="table table-hover table-bordered">
   <thead>
     <tr>
@@ -15,7 +18,7 @@
     <tr>
       <th scope="row">{{$item->id}}</th>
       
-      <td><a href="/appform/{{$item->id}}">{{$item->registration}}</td>
+      <td><a href="/appform/{{$item->id}}">{{$item->registration}}</a></td>
       <td>{{$item->head_of_family}}</td>
       <td>{{$item->created_at}}</td>
       <td>{{$item->status_forwarder}}</td>
@@ -25,3 +28,4 @@
   </tbody>
   @endforeach
 </table>
+@endsection

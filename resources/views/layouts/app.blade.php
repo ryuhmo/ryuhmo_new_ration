@@ -16,13 +16,13 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="/css/retrieve.css">
-    <link rel="stylesheet" href="/css/apptable.css">
-    <link rel="stylesheet" href="/css/form.css">
-    <link rel="stylesheet" href="/css/mainhome.css">
-    <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="css/footer.css">
+    <!-- </--Styles -->
+     <link rel="stylesheet" href="/css/retrieve.css"> 
+     <link rel="stylesheet" href="/css/apptable.css"> 
+     <link rel="stylesheet" href="/css/form.css"> 
+     <link rel="stylesheet" href="/css/mainhome.css"> 
+     <link rel="stylesheet" href="/css/main.css"> 
+   <link rel="stylesheet" href="css/footer.css"> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
