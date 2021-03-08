@@ -11,6 +11,10 @@ class PagesController extends Controller
     public function form(){
     return view('form');
                           }
+    public function mainhomepage()
+    {
+    return view('mainhomepage');
+    }
     public function dcsoform(){
         return view('/dcsoform');
                               }
@@ -59,6 +63,7 @@ public function show($id)
         if ($request->has('issue'))
         {
             $vars->status_forwarder='issue';
+            $vars->pending_status='Signature Required';
             $vars->save();
             return redirect('/submitsucess')->with('success', 'Issued successful!!');
         }
@@ -67,9 +72,18 @@ public function show($id)
         {
             $vars->status_forwarder='reject';
             $vars->save();
-        return redirect('/reject')->with('success', 'You have Rejected successful!!');
+        return redirect('/reject')->with('vars',$vars);
+        }
+
+        else if ($request->has('sign'))
+        {
+            $vars->pending_status='signed';
+            $vars->save();
+        return redirect('/submitsucess')->with('success', 'You have Signed successful!!');
 
         }
+
+        
 
 
      }
@@ -85,10 +99,19 @@ public function show($id)
         }
         
     }
+    // cscviewpage//////////////////////////////////////////////////////////////////////--->
+    public function cscview()
+    {
+        return view('cscview');
+    }
+      // cscviewpage//////////////////////////////////////////////////////////////////////--->
+
+
 
     //  CSC status/////
          public function cscstatus()
      
+         
      {
         $persons = DB::select('select * from applications where csc_status = ?', ['submit']);
         return view('applicantsform') ->with ('persons', $persons);
@@ -102,13 +125,27 @@ public function show($id)
       {
          $dcso = DB::select('select * from applications where status_forwarder = ?', ['issue']);
          return view('forwarderview') ->with ('dcso', $dcso);
+         
+         
+         {
+            $dcso = DB::select('select * from applications where status_forwarder = ?', ['reject']);
+            return view('forwarderview') ->with ('dcso', $dcso);
+         }
       }
           //  DCSO status//////////////////////////////////////////////////////////////////////
+          
+
+          public function pendingstatus()
+     
+          {
+             $pending = DB::select('select * from applications where pending_status = ?', ['Signature Required']);
+             return view('pendingstatus') ->with ('pending', $pending);
+          }
     
 
 
 
-            //  download files////////
+            //  download files////////////////////////////////////////////////////////////////////////////
      public function download1($house_tax_file)
     {
         return response()->download(public_path().'/storage/documents/'. $house_tax_file);
@@ -122,14 +159,14 @@ public function show($id)
     {
         return response()->download(public_path().'/storage/mydoc2/'. $support_document_file );
     }
-        //  download files///////////////////////////////////////////////////////
+        //  download files//////////////////////////////////////////////////////////////////////////////////
 
     
     public function act($id)
     {
         $person = Application::find($id);
         $pdf = PDF::loadView('acknowledge',compact('person'));
-        // return $pdf->download('testing.pdf');
+        //  return $pdf->download('testing.pdf');
         return $pdf->stream();
     }
     public function Rationissue($id)
@@ -158,4 +195,6 @@ public function show($id)
             return view ('search',
             ['registration'=>$registration]);
         }
+      
+        
 } 

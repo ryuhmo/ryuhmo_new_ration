@@ -5,15 +5,11 @@
 @if (session('success'))
 <h2 style="text-align:center">{{session('success')}}</h2>
 @endif<br><br><br>
-<div class="mark">Please click <mark>Home Button</mark> to back to Main Menu<br><i class="fa fa-hand-o-down"></div>
+<div class="mark">Please click <mark>Home Button</mark> to back to Main Menu<br><i class="fa fa-hand-o-down"></i></div>
 
-<form action="/rejects/{{$vars->id}}"  Method="POST">
-    @csrf
-<input type="text" name="reject_form" value="reject_form">
-<input type="submit">
-</form>
+
 <a class="mainhome" href="{{ url('/') }}">
-</i> <div class="subhome">Home</div>
+ <div class="subhome">Home</div>
                 </a>
  
                 <style>
@@ -34,7 +30,7 @@
                       }
                 </style>
 
-                
+            
 
 
 @endsection

@@ -12,10 +12,48 @@ body {
     background:rgb(59, 7, 7);
     color:rgb(156, 154, 152);
     padding: 1px;
-    margin:2px;
+    margin-top:20px;
+    margin-bottom:20px;
     width:100%;
     font-size: 20px;
-    border:4px groove rgb(143, 143, 156)
-
+    border:4px groove rgb(143, 143, 156);
+}
+.form-border{
+    border:4px solid rgb(110, 104, 104);
+    margin:10px;
+    background-color: rgb(250, 244, 244);
+}
+.form-submit{
+    background-color: green;
+    color:wheat;
+    border:2px solid black;
+    border-radius:6px;
+    padding:12px;
+    margin:20px;
+}
+.sub-select{
+    border:1px solid rgb(88, 85, 85);
+    padding:1px 60px;
 }
 
+
+.sub-select1{
+    border:1px solid rgb(88, 85, 85);
+    padding:1px 30px;
+}
+.sub-select2{
+    border:1px solid rgb(88, 85, 85);
+    padding:1px 47px;
+}
+.sub-select3{
+    border:1px solid rgb(88, 85, 85);
+    padding:1px 41px;
+}
+.sub-select4{
+    border:1px solid rgb(88, 85, 85);
+    padding:1px 41px;
+}
+.sub-select5{
+    border:1px solid rgb(88, 85, 85);
+    padding:0px 25px;
+}

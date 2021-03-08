@@ -1,8 +1,13 @@
-
+<link rel="stylesheet" href="/css/form.css">
+<style>
+    input type{
+       border:7px solid black;
+    }
+    </style>
         <h1 class="application">APPLICATION FOR ISSUANCE OF NEW RATION CARD</h1>
         
      
-       
+       <div class="form-border">
         <form action="/action" method="POST" enctype = "multipart/form-data" style=margin-left:8px>
         @csrf
         
@@ -22,11 +27,11 @@
             <input type = "number" name="Enter_Ward_number" value= "Enter Ward number"  required></p>
 
             <p><label>Address – Location:</label>
-            <input type = "text" name="location"  value= "Enter Adrees-Location" style=margin-left:25px></p>
+            <input type = "text" name="location"  value= "Enter Adrees-Location" style=margin-left:33px></p>
             
             <div class="address-sub=district">
                 <label>Address_Sub_District:</label>
-                    <select name="Sub_District"  style=margin-left:20px>
+                    <select name="Sub_District" class="sub-select1"  style=margin-left:15px>
                         <option></option>
                         <option>Tuipang</option>
                         <option>Tlangnuam</option>
@@ -37,7 +42,7 @@
            
             
                 <p>   <label>Address-District:</label>
-                    <select name="Address_district"  style=margin-left:50px>
+                    <select name="Address_district" class="sub-select2" style=margin-left:56px>
                     <option></option>
                         <option>Lunglei</option>
                         <option>Saiha  </option>
@@ -51,7 +56,7 @@
 
             
                   <p><label>Address-State:</label>
-                    <select name="Address_State"  value="state" style=margin-left:66px>
+                    <select name="Address_State" class="sub-select3" value="state" style=margin-left:66px>
                         <option></option>
                         <option>Mizoram</option>
                         <option>Assam</option>
@@ -64,7 +69,7 @@
 
             <div class="address-country">
                 <label>Address-Country:</label>
-                    <select name="address_country" name="country" style=margin-left:49px>
+                    <select name="address_country" class="sub-select4" name="country" style=margin-left:49px>
                         <option></option>
                         <option>Germany</option>
                         <option>Myanma<r/option>
@@ -89,8 +94,10 @@
                         <option>Pakistan police station</option>
                         <option>India police station</option>
                     </select>
-           </fiedset>
+           </fieldset>
             
+           <fieldset>
+                <legend>Family Profile</legend>
             </p><br>
             <p><label class="New-ration">Services Request For New <br>Ration Card- APL (Urban/Rural) :</label>
             <label> Urban </label>
@@ -117,7 +124,7 @@
             
             <p>
             <label class="gender">Gender:</label>
-                    <select name="Gender" style=margin-left:110px>
+                    <select name="Gender" class="sub-select" style=margin-left:110px>
                         <option>Female</option>
                         <option>Male</option>
                     </select>
@@ -125,16 +132,16 @@
 
             <p>
             <label class="Relationship">Relationship:</label>
-                    <select name="relationship" style=margin-left:75px>
+                    <select name="relationship" class="sub-select" style=margin-left:75px>
                         <ul><option></option>
                         <option>F/o</option>
                         <option>S/o</option>
                         <option>M/o</option>
                         <option>D/o</option>
                         <option>W/o</option>
-                        <option>H/o</option>
+                        <option>H/o</option></ul>
                     </select>
-                       </ul>
+                       
                     </p>  <br>
                     
 
@@ -151,12 +158,15 @@
                  </span>
                 
                 </p> 
+                </fieldset>
                 
+                <fieldset>
+                <legend></legend>
                 <br>    
             <p>
             <label>Relation With Head of Family:</label>
             
-                <select name="Relation_with_head_of_Family"  required>
+                <select name="Relation_with_head_of_Family" class="sub-select"  required>
                 
                         <option></option>
                         <option>F/o</option>
@@ -189,7 +199,7 @@
             
                 <p>
             <label class="Religious">Religious:</label>
-                <select name="Religious"  required>
+                <select name="Religious" class="sub-select5" required style=margin-left:14px>
                             <option></option>
                         <option>Religious</option>
                         <option>Christianity</option>
@@ -238,22 +248,25 @@
             
             </p><br>
 
-            <p>
-            <label class="List of Scanned supporting Documents">List of Scanned supporting Documents:</label>
-                <input type="number" name="support_document_number" value="Enter Documents" required>
-                </p><br>
+           
 
         <p><label class="">Upload List of Scanned supporting Documents: </label>
             <input type = "file" name="support_document_file"  required>
             </p><br>
+            <p>
+            <label class="List of Scanned supporting Documents">List of Scanned supporting Documents:</label>
+                <input type="number" name="support_document_number" value="Enter Documents" required>
+                </p><br>
 
             <p>
             Remark (if any): <textarea class="remark" name="textarea" value="Enter remarks" required> </textarea>
 
             </p><br>
         
-            <input type="submit" name="submit">
+            <input type="submit" class="form-submit" name="submit">
+            <fieldset>
         </form>
+        </div>
     
 
 

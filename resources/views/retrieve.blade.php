@@ -240,16 +240,25 @@ table {
 
 
 </table> 
+  @if ($vars->pending_status != "Signature Required")
+<div class="formsubmit">
+
+  <form action="/appform/{{$vars->id}}/update" method="POST">
+  @csrf 
+
+  <input type="submit" class="submit" name="issue" value="ISSUE">
+
+  <input type="submit" class="button" name="reject" value="REJECT"> 
+  </form>
+  </div>
+  
+@else
 <div class="formsubmit">
 <form action="/appform/{{$vars->id}}/update" method="POST">
-@csrf 
+  @csrf 
 
-<input type="submit" class="submit" name="issue" value="ISSUE">
-
-<input type="submit" class="button" name="reject" value="REJECT">
-</form>
-</div>
-
+  <input type="submit" class="submit" name="sign" value="Sign">
+@endif
      
 </body>
 </html>

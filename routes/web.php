@@ -118,6 +118,14 @@ Route::get('/getzip','ZipController@zipCreateAndDownload');
 
 Route::get('/acknowledge/{id}', 'PagesController@act');
 
+// pending status///////
+Route::get('/pendingstatus', 'PagesController@pendingstatus');
+Route::post('/appform/{id}/update', 'PagesController@retrieveSubmit')->middleware('auth');
+// pending status///////
+
+// cscview?????????????????????????
+Route::get('cscview', 'PagesController@cscview');
+// cscview?????????????????????????
 
  Route::get('/dcsoform', 'PagesController@dcsoform')->middleware('auth');
 
@@ -133,6 +141,7 @@ Route::get('/applicantsform', 'PagesController@cscstatus');
 Route::get('/Rationissue/{id}', 'PagesController@Rationissue');
 
 Route::get('/Formstatus', 'PagesController@Formstatus');
+Route::get('/mainhomepage', 'PagesController@mainhomepage');
 
 
 

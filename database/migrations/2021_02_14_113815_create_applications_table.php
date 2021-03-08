@@ -43,6 +43,7 @@ class CreateApplicationsTable extends Migration
             $table->string('Cooking_Gas')->nullable();
             $table->date('date')->nullable();
             $table->string('status_forwarder')->nullable();
+            $table->string('pending_status')->nullable();
             $table->string('csc_status')->nullable();
             $table->string('new_ration_card')->nullable();
             $table->string('Surrender')->nullable();

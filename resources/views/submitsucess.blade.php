@@ -4,11 +4,11 @@
 <h2 class="welcome"> RATION CARD ISSUANCE PORTAL</h2>
 @if (session('success'))
 <h2 style="text-align:center">{{session('success')}}</h2>
-<a href="">fghj</a>
+<a href=""></a>
 @endif<br><br><br>
-<div class="mark">Please click <mark>Home Button</mark> to back to Main Menu<br><i class="fa fa-hand-o-down"></div>
+<div class="mark">Please click <mark>Home Button</mark> to back to Main Menu<br><i class="fa fa-hand-o-down"></i></div>
 <a class="mainhome" href="{{ url('/') }}">
-</i> <div class="subhome"><i class="fa fa-home"></i>Home</div>
+ <div class="subhome">Home</div>
                 </a>
  
                 <style>

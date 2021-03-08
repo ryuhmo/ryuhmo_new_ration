@@ -8,7 +8,7 @@
 <p id="g2">Under Mizoram State e-Governance of Society(MSeGS)</p>
 <div style="pic"><img src="/img/dg5.jpg" alt="dg logo" width="180px" height="140px">
 
-<h2 class="home-login"><a href="/mainhomepage"><i class="fa fa-sign-in"></i>Login</h2>
+
 </div>
 <div class="menu-bar">
 

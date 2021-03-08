@@ -7,6 +7,9 @@
     <input type="search" class="sr" name="search" placeholder="Search Registration No.">
     <button type="submit" id="search">Search</button>
     </form>
+    <h1>Note:</h1>
+    <h4>Search your File with Your Registration No.</h4>
+
 
 
 
@@ -19,7 +22,8 @@
       <th scope="col">Head of Family</th>
       <th scope="col">Date</th>
       <th scope="col">Forwarder Status</th>
-      <th scope="col">DCSO Status</th>
+      <th scope="col">CSC Status</th>
+     
       
     </tr>
   </thead>
@@ -33,6 +37,7 @@
       <td>{{$item->created_at}}</td>
       <td>{{$item->status_forwarder}}</td>
       <td>{{$item->csc_status}}</td>
+      
       
     </tr>
   </tbody>
